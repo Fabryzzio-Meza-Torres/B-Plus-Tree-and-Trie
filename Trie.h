@@ -40,16 +40,7 @@ public:
         return current != nullptr && current->value == word;
     }
     void eliminar(string word){
-        Node* current = root;
-        for(char c: word){
-            if(!current->children[charL(c)]){
-                return;
-            }
-            current = current->children[charL(c)];
-        }
-        if(current->value == word){
-            current->value = "";
-        }
+        Node *current = root;
 
     }
     Node *getRoot()
